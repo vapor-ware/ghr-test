@@ -11,4 +11,5 @@ pythonPipeline([
   'pythonVersion': '3.8',
   'publishToGithub': true,
   'skipIntegrationTest': true,
+  'skipDocker': true,
 ])
