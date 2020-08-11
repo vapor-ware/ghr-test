@@ -10,4 +10,5 @@ pythonPipeline([
   'image': 'vaporio/ghr-test',
   'pythonVersion': '3.8',
   'publishToGithub': true,
+  'skipIntegrationTest': true,
 ])
