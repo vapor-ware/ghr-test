@@ -1,0 +1,13 @@
+#!/usr/bin/env groovy
+
+// Include this shared CI repository to load script helpers and libraries.
+library identifier: 'vapor@pyp/generate-release', retriever: modernSCM(
+  [$class: 'GitSCMSource',
+  remote: 'https://github.com/vapor-ware/ci-shared.git',
+  credentialsId: 'vio-bot-gh'])
+
+pythonPipeline([
+  'image': 'vaporio/ghr-test',
+  'pythonVersion': '3.8',
+  'publishToGithub': true,
+])
