@@ -9,7 +9,7 @@ library identifier: 'vapor@pyp/generate-release', retriever: modernSCM(
 pythonPipeline([
   'image': 'vaporio/ghr-test',
   'pythonVersion': '3.8',
-  'publishToGithub': true,
+  'publishToGitHub': true,
   'skipIntegrationTest': true,
   'skipDocker': true,
 ])
