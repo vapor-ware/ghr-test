@@ -1,11 +1,12 @@
 import setuptools
+import os
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="ghr-test", # Replace with your own username
-    version="0.0.2",
+    name="ghr-test",
+    version=os.getenv("CURRENT_TAG", "0.1.0"),
     author="example",
     author_email="author@example.com",
     description="A small example package",
