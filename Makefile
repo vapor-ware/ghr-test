@@ -7,5 +7,6 @@ unit-test:
 .PHONY: gh-release
 gh-release:
 	python setup.py sdist
-	ghr -replace -t "${GITHUB_TOKEN}" -u "${GITHUB_USER}" -b "${CHANGELOG}" "${CURRENT_TAG}" dist
+	echo "${CHANGELOG}" >> CHANGELOG
+	ghr -replace -t "${GITHUB_TOKEN}" -u "${GITHUB_USER}" -b $(cat CHANGELOG) "${CURRENT_TAG}" dist
 
