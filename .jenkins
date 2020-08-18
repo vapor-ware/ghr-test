@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 // Include this shared CI repository to load script helpers and libraries.
-library identifier: 'vapor@pyp/generate-release', retriever: modernSCM(
+library identifier: 'vapor@serviceCatalogue/init', retriever: modernSCM(
   [$class: 'GitSCMSource',
   remote: 'https://github.com/vapor-ware/ci-shared.git',
   credentialsId: 'vio-bot-gh'])
@@ -12,4 +12,5 @@ pythonPipeline([
   'publishToGitHub': true,
   'skipIntegrationTest': true,
   'skipDocker': true,
+  'testModels': ['netbox': 'tests/models/netbox'],
 ])

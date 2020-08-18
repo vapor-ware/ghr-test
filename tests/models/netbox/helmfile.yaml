@@ -1,0 +1,25 @@
+helmfiles:
+  - path: git::ssh://git@github.com/vapor-ware/helmfiles.git@releases/netbox.yaml?ref=netbox/init
+    values:
+      - hostname: netbox.test.build.cloud.vio.sh
+        skipStartupScripts: !!!str false
+        admins:
+          - ['Nick Schmidt', 'nschmidt@vapor.io']
+          - ['Chuck Butler', 'chuck@vapor.io']
+        allowedHosts:
+        - '*'
+        namespace: {{ requiredEnv "BUILD_TAG" }}
+        password: swordfish
+        apitoken: 0123456789abcdef0123456789abcdef01234567
+        redis:
+          enabled: true
+        postgres:
+          enabled: true
+        extraVolumeMounts:
+        - name: test-netbox-initializers
+          mountPath: /opt/netbox/initializers/
+          readOnly: false
+        extraVolumes:
+        - name: test-netbox-initializers
+          configMap:
+            name: test-netbox-initializers
