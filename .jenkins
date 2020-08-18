@@ -12,5 +12,5 @@ pythonPipeline([
   'publishToGitHub': true,
   'skipIntegrationTest': true,
   'skipDocker': true,
-  'testModels': ['netbox': './tests/models/netbox'],
+  'testModels': ['netbox': 'tests/models/netbox'],
 ])

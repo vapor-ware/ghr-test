@@ -1,7 +1,7 @@
 helmfiles:
   - path: git::ssh://git@github.com/vapor-ware/helmfiles.git@releases/netbox.yaml?ref=netbox/init
     values:
-      - hostname: netbox.test.build.cloud.vio.sh
+      - hostname: {{ requiredEnv "BUILD_TAG" }}.build.cloud.vio.sh
         skipStartupScripts: !!!str false
         admins:
           - ['Nick Schmidt', 'nschmidt@vapor.io']
