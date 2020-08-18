@@ -1,0 +1,18 @@
+{
+ "key_uri": "projects/production-217413/locations/us/keyRings/software-engineering/cryptoKeys/shared",
+ "version": "2",
+ "secrets": [
+  {
+   "name": "SECRET_KEY",
+   "cypher": "CiUAi6m7cZqtxfpYJU6noxngV9a5I4YCC6MlAHE2b9RsYSq2shkEElUAM/1qSzW8hGz/28/bWBkQaTSkB2ngWgEIA6rDz/8bx2Kad935+nhQ5sD1lj4uyL45iKUCyHIuSuBnG9HcX3/v9u0mQ76ooCDsV90DQL6YNsi9BY5C",
+   "created": "2020-08-18T12:05:47.897766372-05:00",
+   "encoding": "base64"
+  },
+  {
+   "name": "DB_PASSWORD",
+   "cypher": "CiUAi6m7ccHzQN8If9EmXo0vzrIeV26ASlYAS9GaMIGdlT/81ZVqEkEAM/1qSz2dbjaoLNCLZ8KHeqB6xgcqTLVqDit/7KmhOmoE6YISTldzMUZ/FpoXOjT9ZoimiMqZFTV/0F629Hxg4w==",
+   "created": "2020-08-18T12:06:17.262553366-05:00",
+   "encoding": "base64"
+  }
+ ]
+}
