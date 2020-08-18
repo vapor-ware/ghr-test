@@ -829,4 +829,4 @@ data:
     #   - delete_virtualmachine
 kind: ConfigMap
 metadata:
-  name: dev-netbox-initializers
+  name: test-netbox-initializers
