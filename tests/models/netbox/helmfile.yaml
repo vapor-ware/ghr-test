@@ -1,14 +1,14 @@
 helmfiles:
   - path: git::ssh://git@github.com/vapor-ware/helmfiles.git@releases/netbox.yaml?ref=netbox/init
     values:
-      - hostname: {{ requiredEnv "BUILD_TAG" }}.build.cloud.vio.sh
+      - hostname: {{ requiredEnv "SAFE_NAMESPACE" }}.build.cloud.vio.sh
         skipStartupScripts: !!!str false
         admins:
           - ['Nick Schmidt', 'nschmidt@vapor.io']
           - ['Chuck Butler', 'chuck@vapor.io']
         allowedHosts:
         - '*'
-        namespace: {{ requiredEnv "BUILD_TAG" }}
+        namespace: {{ requiredEnv "SAFE_NAMESPACE" }}
         password: swordfish
         apitoken: 0123456789abcdef0123456789abcdef01234567
         redis:
